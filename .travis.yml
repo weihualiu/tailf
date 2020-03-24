@@ -7,7 +7,7 @@ env:
     # TODO change the project name
     - PROJECT_NAME=tailf
     # TODO comment out this variable if you don't want to build .deb packages on all the targets.
-    - MAKE_DEB=yes
+    - MAKE_DEB=no
     # TODO update these two variables. They are part of the .deb package metadata
     - DEB_MAINTAINER="Weihua Liu <auhiewuil@gmail.com>"
     - DEB_DESCRIPTION="tailf filter log"
