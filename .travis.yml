@@ -1,9 +1,11 @@
 language: rust
-rust:
-  - stable
-  - beta
-  - nightly
-jobs:
-  allow_failures:
-    - rust: nightly
-  fast_finish: true
+script:
+  - cargo build --release --verbose --all
+  - cargo test --verbose --all
+
+deploy:
+  provider: releases
+  file: "tailf"
+  skip_cleanup: true
+  on:
+    tags: true
